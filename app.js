@@ -5,7 +5,7 @@ const cors = require('cors');
 mongoose.connect("mongodb://Edgar778:lenta123456789@ds121299.mlab.com:21299/lot2", { useNewUrlParser: true }, async () => {
     console.log('Mongodb connected on port 27017');
 });
-const Car = require('./car');
+const Car = require('./server/car');
 const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
