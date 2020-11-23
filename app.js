@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 10
 
 
 app.get('/', (req,res)=>{
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://fintechtest555.herokuapp.com');
 })
 
 // app.get('/', (req, res) => {
