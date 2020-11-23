@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
+var os = require("os");
+
 mongoose.connect("mongodb://Edgar778:lenta123456789@ds121299.mlab.com:21299/lot2", { useNewUrlParser: true }, async () => {
     console.log('Mongodb connected on port 27017');
 });
@@ -15,7 +17,6 @@ app.use(cors());
 // app.use(bodyParser);
 app.use(bodyParser.json({limit:'50mb'})); 
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit: 1000000}));
-
 
 
 // app.get('/', (req,res)=>{
@@ -94,8 +95,8 @@ const small = unique[0];
 
 res.send({median, average, small});
 });
-
-
+// console.log(process.env.NODE_ENV);
+// console.log('=====');
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname, 'client/build')));
     app.get('*', (req,res)=>{
