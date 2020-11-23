@@ -57,7 +57,7 @@ function Fintech() {
   <Form.Group controlId="formBasicEmail">
     <Form.Control type="text" value={name} onChange={setname} placeholder="Type the car" />
   </Form.Group>
-  <Button size="lg" block variant="info">Search</Button>
+  <Button size="lg"  onClick={getPrice} block variant="info">Search</Button>
 </Form>
 </div>
 <div className="col-md-3"></div>
