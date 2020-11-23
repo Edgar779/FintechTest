@@ -22,7 +22,7 @@ function Fintech() {
       name
     }
 
-    API.post(`${config.API_URL}/getDB`, formData)
+    API.post(`/getDB`, formData)
       .then((response) => {
    
 
